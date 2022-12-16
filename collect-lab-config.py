@@ -46,11 +46,10 @@ def create_file(filename, content):
 # Take user input and store it for splitting into a list 
 input_string = input('Enter device IP addresses in X.X.X.X format separated by a single space: ')
 
-# Split the user input into a list stored in device_ip_list. We need to find a way to validate the user input here!!! 
+# Split the user input into a list stored in device_ip_list. 
 device_ip_list = input_string.split()
 
 # Use ipaddress module to validate each item in the list is a valid IP address. Exit if any entry fails.
-
 try: 
     for ip in device_ip_list:
         ipaddress.ip_address(ip)
@@ -64,4 +63,4 @@ for ip in device_ip_list:
     config = get_running_config(ip)
     switchname = get_switchname_from_config(config)
     create_file(switchname + '-config.log', config)
-    print(switchname + ' completed.')   
+    print(switchname + ' completed.')
