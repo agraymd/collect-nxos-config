@@ -3,6 +3,7 @@ import sys
 import time
 import argparse
 import re
+import ipaddress 
 
 # Define function to get and print running config.
 def get_running_config(ip):
@@ -47,6 +48,16 @@ input_string = input('Enter device IP addresses in X.X.X.X format separated by a
 
 # Split the user input into a list stored in device_ip_list. We need to find a way to validate the user input here!!! 
 device_ip_list = input_string.split()
+
+# Use ipaddress module to validate each item in the list is a valid IP address. Exit if any entry fails.
+
+try: 
+    for ip in device_ip_list:
+        ipaddress.ip_address(ip)
+
+except ValueError:
+    print('Invalid input supplied. ' + ip + ' is invalid not a valid IP address.')
+    sys.exit(1)
 
 # Loop through each IP in the list and get the running config, get the switchname, and create/save the file  
 for ip in device_ip_list:
