@@ -55,7 +55,7 @@ try:
         ipaddress.ip_address(ip)
 
 except ValueError:
-    print('Invalid input supplied. ' + ip + ' is invalid not a valid IP address.')
+    print('Invalid input supplied. ' + ip + ' is not a valid IP address.')
     sys.exit(1)
 
 # Loop through each IP in the list and get the running config, get the switchname, and create/save the file  
@@ -64,3 +64,7 @@ for ip in device_ip_list:
     switchname = get_switchname_from_config(config)
     create_file(switchname + '-config.log', config)
     print(switchname + ' completed.')
+    
+
+
+    
