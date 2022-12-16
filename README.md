@@ -39,10 +39,10 @@ My bash profile is stored at /Users/alegray. The contents of the file are as fol
 
 ```
 export PATH='YOUR-PATH-HERE’
-*export collectconfig='python3 /Users/username/Documents/path/to-script/collect-lab-config.py'*
+export collectconfig='python3 /Users/username/Documents/path/to-script/collect-lab-config.py'
 ```
 
-The bolded portion ensures that each time I open the terminal, I have an environment variable $collectconfig available to me. 
+This ensures that each time I open the terminal, I have an environment variable $collectconfig available to me. 
 
 This variable just uses python to execute the script and specifies the full path where the script is saved, which is what you would need to change to match your system. 
 
