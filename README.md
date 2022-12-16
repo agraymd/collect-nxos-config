@@ -37,10 +37,10 @@ If you are using BASH as your shell this will work for you, if you are using zsh
 My bash profile is stored at /Users/alegray. The contents of the file are as follows: 
 
 
+```
 export PATH='YOUR-PATH-HERE’
-export collectconfig='python3 /Users/username/Documents/path/to-script/collect-lab-config.py'
-
-
+*export collectconfig='python3 /Users/username/Documents/path/to-script/collect-lab-config.py'*
+```
 
 The bolded portion ensures that each time I open the terminal, I have an environment variable $collectconfig available to me. 
 
@@ -63,7 +63,7 @@ We have just finished a lab setup and want to collect configurations from 7 devi
 
 We will create and change to a directory where we want to save the configurations, call the script, and provide the IP addresses in a list with a single space between them: 
 
-
+```
 YOUR-MACHINE:~ your-user$ mkdir ./test && cd ./test && $collectconfig
 Enter device IP addresses in X.X.X.X format separated by a single space: 10.122.176.225 10.122.176.150 10.122.176.137 10.122.177.11 10.122.176.212 10.122.176.167 10.122.176.168
 Device1 completed.
@@ -73,7 +73,7 @@ Device4 completed.
 Device5 completed.
 Device6 completed.
 Device7 completed.
-
+```
 
 
 # Summary 
