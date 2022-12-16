@@ -64,8 +64,4 @@ for ip in device_ip_list:
     config = get_running_config(ip)
     switchname = get_switchname_from_config(config)
     create_file(switchname + '-config.log', config)
-    print(switchname + ' completed.')
-    
-
-
-    
+    print(switchname + ' completed.')   
