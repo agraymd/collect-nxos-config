@@ -81,6 +81,9 @@ Device7 completed.
 This is the basic idea of using the script. You can achieve similar results with windows, or simply specify the full path to the script when you want to run it. To me this is faster than using a terminal program or something else to collect the running configurations. 
 
 
+## Room For Improvement 
+
+This would be a good case for practicing with unit test and try/except errors. One thing that is needed is to validate that the user input is a list of IP with a single space between them. This could be done with regex and/or unittest, etc. 
 
 
 
